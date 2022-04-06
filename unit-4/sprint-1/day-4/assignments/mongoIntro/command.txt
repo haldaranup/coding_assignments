@@ -1,0 +1,33 @@
+
+use assignment
+db.createCollection('users')
+
+db.users.insert({first_name: "Anup", last_name: "Haldar", email: "anup@gmail.com", gender: "male", ip_address: 245667, age: 22})
+
+db.users.insert([{first_name: "Anup", last_name: "Haldar", email: "anup@gmail.com", gender: "male", ip_address: 245667, age: 22},{first_name: "Anup", last_name: "Haldar", email: "anup@gmail.com", gender: "male", ip_address: 245667, age: 22}])
+
+// All this will be same as above so it is empty for sake of simplicity
+
+db.users.insert({})
+db.users.insert({})
+db.users.insert({})
+db.users.insert({})
+db.users.insert({})
+db.users.insert({})
+db.users.insert({})
+db.users.insert({})
+
+db.users.find()
+db.users.findOne()
+
+db.users.update({first_name: "Anup"}, {$set: {first_name: "anup"}})
+db.users.updateMany({first_name: "Anup"}, {$set: {first_name: "anup"}})
+
+db.users.remove({first_name: "anup"}, 1)
+
+db.users.delete({first_name: "anup"})
+
+db.users.deleteMany({first_name: "anup"})
+
+db.dropDatabase()
+

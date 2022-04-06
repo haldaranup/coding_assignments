@@ -1,0 +1,19 @@
+
+
+db.movieData.find({movie_name: {$eq: "Robbyn Longhi"}})
+
+db.movieData.find({movie_name: {$ne: "Robbyn Longhi"}})
+
+db.movieData.find({$and: [{budget: {$gt:12000}}, {budget: {$gte: 12000}}]})
+db.movieData.find({$and: [{budget: {$lt:12000}}, {budget: {$lte: 12000}}]})
+
+db.movieData.find({$and: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]})
+db.movieData.find({$or: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]})
+db.movieData.find({$nor: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]})
+db.movieData.find({$or: [{production_year: {$ne: 2000}},{budget: {$ne: 10000}}]})
+db.movieData.find({$and: [{production_year: {$gte: 2000}},{production_year: {$gte: 2000}}]})
+
+db.movieData.find({}).sort({production_year: -1, movie_name: 1})
+
+db.movieData.find({}).sort({production_year: -1, movie_name: 1}).skip(10).limit(5)
+
