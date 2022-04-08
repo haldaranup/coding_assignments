@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      form {
+        width: 70%;
+        margin: auto;
+        font-size: 1.15rem;
+        color: #c50750;
+        font-weight: bolder;
+      }
+      input {
+        padding: 5px;
+        font-size: 1.15rem;
+        border: 1px solid rgb(25, 5, 117);
+        color: teal;
+        border-radius: 4px;
+      }
+      .submit {
+        border: none;
+        background-color: rgb(36, 14, 161);
+        color: white;
+        border-radius: 3px;
+        width: 120px;
+        cursor: pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <form action="">
+      Name:
+      <input type="text" class="name" />
+      Phone:
+      <input type="text" class="phone" />
+      City:
+      <input type="text" class="city" />
+      <input type="submit" class="submit" value="Submit" />
+    </form>
+
+
+    <script>
+      let arr = [];
+
+      function Student(a, b, c) {
+        this.name = a;
+        this.phone = b;
+        this.city = c;
+      }
+      // const form = document.querySelector("form");
+
+      document.querySelector(".submit").addEventListener("click", details);
+      function details(event) {
+        event.preventDefault();
+        let name = document.querySelector(".name").value;
+        let phone = document.querySelector(".phone").value;
+        let city = document.querySelector(".city").value;
+
+        let obj = new Student(name, phone, city);
+
+        arr.push(obj);
+
+        localStorage.setItem("studentData", JSON.stringify(arr));
+
+      }
+
+      
+    </script>
+  </body>
+</html>

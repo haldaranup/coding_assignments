@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        width: 90%;
+        margin: auto;
+      }
+      #container img {
+        height: 200px;
+        width: 200px;
+      }
+      #inputDiv {
+        width: 18%;
+        margin: auto;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #btn {
+        height: 30px;
+        width: 100px;
+        border: none;
+        background-color: #03033d;
+        color: rgb(238, 234, 13);
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #err{
+          color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="inputDiv">
+      <input type="text" id="inputValue" /><button id="btn" onclick="getData()">
+        Search Movie
+      </button>
+    </div>
+
+    <div id="container"></div>
+    <p id="err"></p>
+  </body>
+</html>
+
+<!-- a6a57143 -->
+
+<script>
+  let apiKey = `a6a57143`;
+  let btn = document.getElementById("btn");
+
+  const getData = async () => {
+    try {
+      let input = document.getElementById("inputValue").value;
+      let res = await fetch(
+        `https://www.omdbapi.com/?apikey=${apiKey}&s=${input}&type=movie`
+      );
+      let oldData = await res.json();
+      let data = oldData.Search;
+      
+
+      console.log("data:", data);
+      showData(data);
+      
+    } catch (error) {
+      console.log("error:", error);
+    }
+  };
+  function rand() {
+    let random = (Math.random() * 10).toFixed(1);
+    return random;
+  }
+  function showData(data) {
+    if (data == undefined) {
+        let err = document.getElementById("err");
+    err.textContent = "uh uh Movie not found!";
+          
+      }
+    let cont = document.getElementById("container");
+    cont.innerHTML = null;
+    data.forEach((m) => {
+      let smallDiv = document.createElement("div");
+
+      let image = document.createElement("img");
+      if (image.src == "N/A") {
+        return false;
+      } else {
+        image.src = m.Poster;
+      }
+      console.log("image:", image);
+
+      let title = document.createElement("p");
+      title.textContent = m.Title;
+
+      let year = document.createElement("p");
+      year.textContent = m.Year;
+
+      let rating = document.createElement("p");
+      rating.textContent = rand();
+
+      let reco = document.createElement("p");
+
+      if (rating.textContent > 8.5) {
+        reco.textContent = "Recommended";
+        reco.style.color = "green";
+        reco.style.fontSize = "1.5rem";
+        reco.style.fontWeight = "bold";
+      }
+      
+      smallDiv.append(reco, image, title, year, rating);
+      cont.append(smallDiv);
+    });
+  }
+</script>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="/styles/index.css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navmain">
+        <li><a href="index.html">Home</a></li>
+      </div>
+    </nav>
+
+    <div id="slideshow">
+      <!--Show Slideshow here-->
+      <img id="pic" src="" alt="" />
+    </div>
+
+    <div id="sort-buttons">
+      <!--Add sorting here-->
+      <select name="" id="sortbtn" onchange="sortMovie()">
+        <option value="abc">Sort by Rating</option>
+        <option id="sort-lh" value="asc">Low to High</option>
+        <option id="sort-hl" value="dec">High to low</option>
+      </select>
+    </div>
+    <div id="movies">
+      <!--Show list of movies here-->
+    </div>
+  </body>
+</html>
+
+<script>
+  let images = [
+    "https://i0.wp.com/images.onwardstate.com/uploads/2010/10/inception.png?fit=775%2C461&ssl=1",
+    "https://wallpapercave.com/dwp1x/wp1814938.jpg",
+    "https://wallpapercave.com/dwp1x/Nt5OZxy.jpg",
+    "https://wallpapercave.com/dwp1x/wp1984718.jpg",
+    "https://wallpapercave.com/dwp1x/wp4179662.jpg",
+    "https://wallpapercave.com/dwp1x/wp1861901.jpg",
+  ];
+
+  localStorage.setItem("Images", JSON.stringify(images));
+  let picture = document.getElementById("pic");
+  function slideImage() {
+    let img = JSON.parse(localStorage.getItem("Images"));
+    let i = 0;
+    let x = setInterval(() => {
+      if (i === img.length) {
+        i = 0;
+      }
+      picture.src = img[i];
+      i++;
+    }, 2000);
+  }
+  slideImage();
+
+  let MovieData = [
+    {
+      name: "The Avengers",
+      releaseDate: "11 April, 2012",
+      url: "https://wallpapercave.com/dwp1x/6lvp4zT.jpg",
+      rating: 8.4,
+    },
+    {
+      name: "Koi Mil Gaya",
+      releaseDate: "8 August 2003",
+      url: "https://wallpapercave.com/wp/wp8354364.jpg",
+      rating: 8.2,
+    },
+    {
+      name: "Burfi",
+      releaseDate: "14 Sep 2012",
+      url: "https://www.bollywoodhungama.com/wp-content/uploads/2021/01/WhatsApp-Image-2021-01-29-at-12.46.39-PM.jpeg",
+      rating: 8,
+    },
+    {
+      name: "Tare Jaamin Par",
+      releaseDate: "21 Dec 2007",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJScilXWCEPSLj7GKDD1ItjPy2L16rTutKOA&usqp=CAU",
+      rating: 8.4,
+    },
+    {
+      name: "Lagaan",
+      releaseDate: "15 June 2001",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrktGoHrEppwb9_YOpYC0R0e_TY9XNapnu40s4KSn-bm6WG7o0n2aetzYZAaVfq7JC2gw&usqp=CAU",
+      rating: 8.1,
+    },
+    {
+      name: "Wonder Woman",
+      releaseDate: "2 October 2020",
+      url: "https://wallpapercave.com/dwp1x/wp8207954.jpg",
+      rating: 7.8,
+    },
+    {
+      name: "Holiday",
+      releaseDate: "6 June 2014",
+      url: "https://filmfare.wwmindia.com/content/2020/sep/akshaykumarbirthdayarticle101599568816.jpg",
+      rating: 7.3,
+    },
+    {
+      name: "Raabta",
+      releaseDate: "9 June Dec 2017",
+      url: "https://m.media-amazon.com/images/I/A172a5FxVaL._SX679_.jpg",
+      rating: 5.2,
+    },
+    {
+      name: "Dil Bechara",
+      releaseDate: "24 July 2020",
+      url: "https://www.deccanherald.com/sites/dh/files/articleimages/2020/06/25/Dil%20Bechara-1593083302.jpg",
+      rating: 8.1,
+    },
+  ];
+
+  localStorage.setItem("movies", JSON.stringify(MovieData));
+  renderMovie(MovieData);
+  function renderMovie(e) {
+    document.getElementById("movies").innerHTML = "";
+
+    e.map(function (el) {
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+      div2.setAttribute("id", "div2");
+      let div3 = document.createElement("div");
+
+      let name = document.createElement("p");
+      name.textContent = el.name;
+
+      let pic = document.createElement("img");
+      pic.setAttribute("src", el.url);
+
+      let date = document.createElement("p");
+      date.textContent = `Release Date ${el.releaseDate}`;
+
+      let rat = document.createElement("p");
+      rat.textContent = `Rating : ${el.rating}`;
+
+      div1.append(pic);
+      div2.append(name, date, rat);
+      div3.append(div1, div2);
+      document.getElementById("movies").append(div3);
+    });
+  }
+
+  function sortMovie() {
+    let ratingM = document.getElementById("sortbtn").value;
+    let data;
+    if (ratingM === "asc") {
+      data = MovieData.sort(function (a, b) {
+        return a.rating - b.rating;
+      });
+    } else if (ratingM === "dec") {
+      data = MovieData.sort(function (a, b) {
+        return b.rating - a.rating;
+      });
+    }
+    renderMovie(data);
+  }
+</script>

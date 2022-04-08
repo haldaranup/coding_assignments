@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      input {
+        width: 200px;
+      }
+      #movies {
+        width: 206px;
+        height: 200px;
+        /* border: 1px solid red; */
+        overflow: scroll;
+      }
+      #movies img {
+        height: 160px;
+        width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="query" />
+    <div id="movies"></div>
+    <div id="details"></div>
+  </body>
+</html>
+
+<script>
+  async function searchMovie() {
+    try {
+      let movie = document.getElementById("query").value;
+      let res = await fetch(
+        `https://www.omdbapi.com/?apikey=a6a57143&s=${movie}`
+      );
+
+      let data = await res.json();
+      console.log("data:", data);
+      return data.Search;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function main() {
+    let data = await searchMovie();
+
+    if (data == undefined) {
+      return false;
+    }
+    appendData(data);
+    console.log("data:", data);
+  }
+
+  let div = document.getElementById("movies");
+  function appendData(movies) {
+    div.innerHTML = "";
+    movies.forEach((e) => {
+      let small = document.createElement("div");
+      let p = document.createElement("p");
+      p.innerText = e.Title;
+
+      let image = document.createElement("img");
+      image.src = e.Poster;
+
+      let re = document.createElement("p");
+      re.innerText = "Release Date: " + e.Year;
+
+      let cart = [];
+      small.addEventListener("click", () => {
+        cart.push(e);
+        localStorage.setItem("detail", JSON.stringify(cart));
+        window.location.href = "details.html";
+      });
+
+      small.append(p, re, image);
+      div.append(small);
+    });
+  }
+  
+  let query = document.getElementById("query");
+  
+  const debounce = (func, delay) => {
+    let timer;
+    return function () {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        func();
+      }, delay);
+    };
+  };
+
+
+  query.addEventListener("input", debounce(main, 1000));
+</script>

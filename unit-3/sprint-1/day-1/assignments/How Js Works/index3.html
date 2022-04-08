@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini JS Datatype Learning App</title>
+    <style>
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-sizing: border-box;
+      }
+
+      button {
+        border: none;
+        width: 120px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #020242;
+        color: #ffd900;
+        font-size: 1.25rem;
+      }
+      .allButton {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .para {
+        width: 80%;
+        margin: auto;
+      }
+      .about {
+        margin-top: 25vh;
+        text-align: center;
+        font-size: 2rem;
+        color: rgb(138, 58, 4);
+        line-height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="allButton"></div>
+    <div class="para">
+      <p class="about"></p>
+    </div>
+
+    <script>
+      const btn1 = document.createElement("button");
+      btn1.textContent = "Object";
+
+      btn1.addEventListener("click", function () {
+        let objpara =
+          "JavaScript is an object-based language. Everything is an object in JavaScript. JavaScript object is a non-primitive data-type that allows you to store multiple collections of data.";
+        document.querySelector(".about").innerText = objpara;
+      });
+
+      const btn2 = document.createElement("button");
+      btn2.textContent = "Array";
+      btn2.addEventListener("click", function () {
+        let arrpara =
+          "In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list ofelements and access them by a single variable. Unlike most languageswhere array is a reference to the multiple variable, in JavaScript arrayis a single variable that stores multiple elements.";
+        document.querySelector(".about").innerText = arrpara;
+      });
+
+      const btn3 = document.createElement("button");
+      btn3.textContent = "Function";
+      btn3.addEventListener("click", function () {
+        let funcpara =
+          "A function in JavaScript is similar to a procedure—a set of statementsthat performs a task or calculates a value, but for a procedure toqualify as a function, it should take some input and return an outputwhere there is some obvious relationship between the input and theoutput. To use a function, you must define it somewhere in the scopefrom which you wish to call it.";
+        document.querySelector(".about").innerText = funcpara;
+      });
+
+      const btn4 = document.createElement("button");
+      btn4.textContent = "String";
+      btn4.addEventListener("click", function () {
+        let strpara =
+          "String is a primitive data type in JavaScript. A string is textualcontent. It must be enclosed in single or double quotation marks. Since,string is character index, it can be accessed using for loop and for-ofloop.";
+        document.querySelector(".about").innerText = strpara;
+      });
+
+      const btn5 = document.createElement("button");
+      btn5.textContent = "Number";
+      btn5.addEventListener("click", function () {
+        let numpara =
+          "The JavaScript number object enables you to represent a numeric value.It may be integer or floating-point. JavaScript number object followsIEEE standard to represent the floating-point numbers.";
+        document.querySelector(".about").innerText = numpara;
+      });
+
+      const btn6 = document.createElement("button");
+      btn6.textContent = "Null";
+      btn6.addEventListener("click", function () {
+        let nullpara =
+          "The value null represents the intentional absence of any object value.It is one of JavaScript's primitive values and is treated as falsy forboolean operations.";
+        document.querySelector(".about").innerText = nullpara;
+      });
+
+      const btn7 = document.createElement("button");
+      btn7.textContent = "Undefined";
+      btn7.addEventListener("click", function () {
+        let udfpara =
+          "undefined is a property of the global object. That is, it is a variablein global scope. The initial value of undefined is the primitive valueundefined.";
+        document.querySelector(".about").innerText = udfpara;
+      });
+
+      document
+        .querySelector(".allButton")
+        .append(btn1, btn2, btn3, btn4, btn5, btn6, btn7);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #main img{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+
+<script>
+    let url = `https://api.themoviedb.org/3/discover/movie?api_key=a2b3dfd422f1993f16ea9678e7a1cdff&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
+
+    async function getData(){
+        let res = await fetch(url)
+        let data1 = await res.json()
+        let data = data1.results
+        console.log('data:', data)
+        appendData(data)
+    }
+
+    getData()
+    function appendData(data){
+        let main = document.getElementById("main")
+        data.forEach((p)=>{
+            let imgurl = 'https://image.tmdb.org/t/p/original'
+            let div = document.createElement("div")
+
+            let title = document.createElement("p")
+            title.textContent = p.title
+            let release = document.createElement("p")
+            release.textContent = p.release_date
+
+            let image = document.createElement("img")
+            image.src = `${imgurl}${p.poster_path}`
+
+            div.append(image, release, title)
+            main.append(div)
+
+        })
+    }
+    
+</script>

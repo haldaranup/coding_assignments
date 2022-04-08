@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+</html>
+<script>
+  let res = JSON.parse(localStorage.getItem("detail"));
+  console.log("res:", res);
+
+  res.forEach((res) => {
+    let main = document.getElementById("main");
+
+    let div = document.createElement("div");
+    let year = document.createElement("p");
+    let title = document.createElement("p");
+    title.textContent = res.Title;
+    year.textContent = res.Year;
+
+    let image = document.createElement("img");
+    image.src = res.Poster;
+
+    div.append(title, image, year);
+    main.append(div);
+  });
+</script>
