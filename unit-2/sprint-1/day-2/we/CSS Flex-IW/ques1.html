@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav {
+            height: 80px;
+            width: 80%;
+            background-color: rgb(68, 61, 68);
+            margin: auto;
+            display: flex;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .left {
+            width: 60%;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 25px;
+        }
+
+        .right {
+            width: 40%;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 25px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #page {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        option {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="left">MEGAWIDTH
+
+        </div>
+        <div class="right">
+            <div>Home</div>
+            <div>About</div>
+            <div>Blog</div>
+            <select name="" id="page">
+                <option value="">Page</option>
+                <option value="">More</option>
+                <option value="">Extra</option>
+            </select>
+        </div>
+    </div>
+</body>
+
+</html>

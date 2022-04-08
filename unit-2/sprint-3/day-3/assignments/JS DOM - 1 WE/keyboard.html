@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            height: 50px;
+            width: 300px;
+            border: 5px solid grey;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            grid-template-rows: repeat(4, 80px);
+            justify-content: center;
+            grid-gap: 20px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .clear {
+            background-color: red;
+            border-radius: 5px;
+            border: none;
+            color: oldlace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div class="container">
+        <button onclick="btn('0')">0</button>
+        <button onclick="btn('1')">1</button>
+        <button onclick="btn('2')">2</button>
+        <button onclick="btn('3')">3</button>
+        <button onclick="btn('4')">4</button>
+        <button onclick="btn('5')">5</button>
+        <button onclick="btn('6')">6</button>
+        <button onclick="btn('7')">7</button>
+        <button onclick="btn('8')">8</button>
+        <button onclick="btn('9')">9</button>
+        <button class="clear" onclick="removeAll()">Clear</button>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    var box = "";
+
+    function btn(num) {
+        box = box + num;
+        console.log(box)
+        document.querySelector("#box").textContent = box;
+    }
+
+    function removeAll() {
+        document.querySelector("#box").textContent = ""
+        box = "";
+    }
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bozaz</title>
+    <style>
+        .block {
+            display: block;
+        }
+
+        #submit {
+            width: 180px;
+            height: 30px;
+            background-color: rgb(41, 152, 243);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bozaz</h1>
+    <div id="container">
+        <div>
+            <form id="form" action="">
+                <select name="" id="cat">
+                    <option value="">Select</option>
+                    <option value="book">Books</option>
+                    <option value="mob">Mobiles</option>
+                    <option value="furni">Furniture</option>
+                </select>
+                <input type="text" id="title" placeholder="Title">
+                <textarea name="" class="block" id="desc" cols="30" rows="10"></textarea>
+                <input type="number" id="price" placeholder="Price">
+                <input id="submit" class="block" type="submit" value="submit">
+            </form>
+        </div>
+
+        <div id="display">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#form").addEventListener('submit', formSubmit)
+        var bozazArr = JSON.parse(localStorage.getItem("bozazData")) || []
+
+        displayTable(bozazArr)
+
+        function formSubmit(event) {
+            event.preventDefault()
+
+            var bozazObj = {
+                category: form.cat.value,
+                title: form.title.value,
+                description: form.desc.value,
+                price: form.price.value
+            }
+            bozazArr.push(bozazObj)
+            displayTable(bozazArr)
+            localStorage.setItem("bozazData", JSON.stringify(bozazArr))
+        }
+
+        function displayTable(bozazArr) {
+            var tbody = document.querySelector("tbody")
+            tbody.textContent = ""
+            bozazArr.map(function (elem) {
+                var tr = document.createElement("tr")
+                var td1 = document.createElement("td")
+                var td2 = document.createElement("td")
+                var td3 = document.createElement("td")
+                var td4 = document.createElement("td")
+
+                td1.textContent = elem.category
+                td2.textContent = elem.title
+                td3.textContent = elem.description
+                td4.textContent = elem.price
+                tr.append(td1, td2, td3, td4)
+                tbody.append(tr)
+
+            })
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(12, 40px);
+            grid-template-rows: repeat(6, 100px);
+            grid-template-areas:
+                "f f f f f f g g g g g g"
+                "h h h i i i i i i i i i"
+                "j j j j j j j j j j j j"
+            ;
+            justify-content: center;
+            margin-top: 100px;
+
+        }
+
+        .container>div {
+            background-color: #444444;
+            border-radius: 10px;
+            font-size: 40px;
+            color: aliceblue;
+            font-weight: bold;
+            display: grid;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .box6 {
+
+            grid-area: f;
+        }
+
+        .box7 {
+
+            grid-area: g;
+        }
+
+        .box8 {
+
+            grid-area: h;
+        }
+
+        .box9 {
+
+            grid-area: i;
+        }
+
+        .box10 {
+
+            grid-area: j;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box6">A</div>
+        <div class="box7">B</div>
+        <div class="box8">C</div>
+        <div class="box9">D</div>
+        <div class="box10">E</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            margin: 40px;
+        }
+
+        h1 {
+            margin-left: 100px;
+        }
+
+        button {
+            background-color: rgb(24, 182, 245);
+            height: 40px;
+            width: 140px;
+            border: none;
+            border-radius: 5px;
+            color: aliceblue;
+            margin-left: 100px;
+        }
+
+        img {
+            height: 400px;
+            width: 400px;
+            background-color: rgb(99, 61, 61);
+        }
+
+        p {
+            width: 400px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>
+<script>
+    var img = document.createElement("img")
+    img.setAttribute("src", "")
+
+    var mainDiv = document.createElement("div");
+    var h1 = document.createElement("h1");
+    h1.textContent = "Alice Iddele"
+    var p = document.createElement("p");
+    p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, harum sint. Vero, tenetur. Ullam, obcaecati natus incidunt aliquid iste laboriosam soluta ab quod unde necessitatibus, fugiat, officia quis maxime placeat!"
+    var btn = document.createElement("button");
+    btn.textContent = "Profile"
+
+    mainDiv.append(h1, p, btn);
+
+    document.getElementById("container").append(img, mainDiv)
+
+</script>

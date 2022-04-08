@@ -1,0 +1,27 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(2, 300px);
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    background-color: #f3f6ff;
+}
+.container>div{
+    background-color: #ffffff;
+    border-radius: 7px;
+    text-align: center;
+}
+img{
+    height: 70%;
+    width: 100%;
+}
+
+

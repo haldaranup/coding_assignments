@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Helvetica, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            text-align: center;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px;
+            margin: auto;
+        }
+
+        img {
+            height: 80%;
+            width: 100%;
+        }
+
+        .para {}
+
+        .all {
+            width: 90%;
+            margin-left: 40px;
+            margin-top: 60px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+        }
+
+        @media only screen and (min-width: 535px) and (max-width: 768px) {
+            .content {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 535px) {
+            .content {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+            <h2>OUR BLOG</h2>
+        </div>
+
+        <div class="content">
+            <div class="all">
+                <div class="first pic"><img
+                        src="https://preview.colorlib.com/theme/fashe/images/xblog-01.jpg.pagespeed.ic.RXKhYi6o7N.webp"
+                        alt=""></div>
+                <div class="para">
+                    <h4>Black Friday Guide: Keep Going!</h4>
+                    <p>By <strong>Nancy Ward</strong> on July 2020</p>
+                    <p>Lorem sit amet consectetur adipisicing ipsum dolor, sit amet consectetur adipisicing elit.
+                        Incidunt, totam hic? Ex, perferendis
+                        est.</p>
+                </div>
+            </div>
+
+            <div class="all">
+                <div class="second pic"><img
+                        src="https://preview.colorlib.com/theme/fashe/images/xblog-02.jpg.pagespeed.ic.uNlo4Zicxu.webp"
+                        alt=""></div>
+                <div class="para">
+                    <h4>The White Sneakers Nearly Every Fashion Girls Own</h4>
+                    <p>By <strong>Nancy Ward</strong> on July 2020</p>
+                    <p>Lorem sit amet consectetur adipisicing ipsum dolor, sit amet consectetur adipisicing elit.
+                        Incidunt, totam hic? Ex, perferendis
+                        est.</p>
+                </div>
+            </div>
+
+            <div class="all">
+                <div class="third pic"><img
+                        src="https://preview.colorlib.com/theme/fashe/images/xblog-03.jpg.pagespeed.ic.3cqHQ5aCVq.webp"
+                        alt=""></div>
+                <div class="para">
+                    <h4>Black Friday Guide: Keep Going!</h4>
+                    <p>By <strong>Nancy Ward</strong> on July 2020</p>
+                    <p>Lorem sit amet consectetur adipisicing ipsum dolor, sit amet consectetur adipisicing elit.
+                        Incidunt, totam hic? Ex, perferendis
+                        est.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
