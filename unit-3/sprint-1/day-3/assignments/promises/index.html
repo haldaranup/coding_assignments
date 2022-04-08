@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        box-sizing: border-box;
+      }
+      #food {
+        width: 200px;
+        height: 40px;
+      }
+      .btndiv {
+        width: 8%;
+        margin: auto;
+      }
+      .btn {
+        width: 160px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(2, 2, 49);
+        color: rgb(244, 248, 10);
+        font-size: 1.1rem;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="" id="food">
+      <option value="burger">Burger</option>
+      <option value="momo">Momo</option>
+      <option value="eggroll">Egg Roll</option>
+      <option value="frenchfries">French Fries</option>
+    </select>
+
+    <div class="btndiv">
+      <button class="btn">Order Food</button>
+    </div>
+    <div class="allData"></div>
+  </body>
+</html>
+
+<script>
+  let btn = document.querySelector(".btn");
+  btn.addEventListener("click", order);
+  let data = document.querySelector(".allData");
+
+  function order() {
+    let order = document.querySelector("#food").value;
+    let orderid = Math.floor(Math.random() * 100);
+    let image = document.createElement("img");
+
+    if (order == "burger") {
+      image.src =
+        "https://media.istockphoto.com/photos/closeup-of-home-made-tasty-burger-on-wooden-table-picture-id1300482641?b=1&k=20&m=1300482641&s=170667a&w=0&h=4wmDNS7Y3X_bxnUXUNykuLDf7yt_4ZhbqP3bPkhWFsg=";
+    } else if (order == "momo") {
+      image.src =
+        "https://media.istockphoto.com/photos/japanese-dumplings-gyoza-with-pork-meat-and-vegetables-picture-id1133151212?b=1&k=20&m=1133151212&s=170667a&w=0&h=-XPU-BOpOepaVLcVsMuXyZNSml80XlY_KDFKsSWW8ug=";
+    } else if (order == "eggroll") {
+      image.src =
+        "https://media.istockphoto.com/photos/homemade-egg-rolls-with-dipping-sauce-picture-id922650052?b=1&k=20&m=922650052&s=170667a&w=0&h=CuXSJGVyzVe3v92apfao34OZ8vI4lA5gs2aTIMLWRis=";
+    } else if (order == "frenchfries") {
+      image.src =
+        "https://media.istockphoto.com/photos/fast-food-picture-id531189325?b=1&k=20&m=531189325&s=170667a&w=0&h=AwqBLMunJMm4BZLGNB2VmeCaFsM0zU_U3HrUnUH3xRk=";
+    }
+
+    let orderStatus = new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        resolve(`Your ${order} is ready, with id no ${orderid}`);
+      }, 5000);
+    });
+
+    orderStatus.then(function (msg) {
+      let h1 = document.createElement("h1");
+      h1.textContent = msg;
+
+      data.append(h1, image);
+    });
+  }
+</script>

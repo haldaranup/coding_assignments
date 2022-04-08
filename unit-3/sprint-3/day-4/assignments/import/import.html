@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/import.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="main"></div>
+</body>
+</html>
+
+
+
+<script type="module">
+//  api https://www.themealdb.com/api/json/v1/1/categories.php 
+
+import {navBar} from "./components/nav.js"
+
+import {getData, appendData} from "./main/main.js"
+
+let n = document.getElementById("nav")
+n.innerHTML = navBar()
+
+let url = "https://www.themealdb.com/api/json/v1/1/categories.php"
+let data = await getData(url)
+console.log('data:', data)
+
+let main = document.getElementById("main")
+appendData(data, main)
+
+
+let search = document.getElementById("navbar")
+
+search.addEventListener("keypress", (e)=>{
+    let searchterm = document.getElementById("navbar").value
+    if(e.key == "Enter"){
+        localStorage.setItem("search", searchterm)
+        window.location.href = "search.html"
+    }
+})
+
+let latest = document.getElementById("latest")
+
+let rotd = document.getElementById("recipe")
+
+latest.addEventListener("click", ()=>{
+    window.location.href = "latest.html"
+})
+rotd.addEventListener("click", ()=>{
+    window.location.href = "recipe.html"
+})
+</script>

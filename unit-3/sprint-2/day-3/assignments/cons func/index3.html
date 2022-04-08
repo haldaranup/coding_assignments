@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  let obj1 = {
+    name: "Amar",
+    skill: "Singer",
+    city: "Goa",
+  };
+
+  let obj2 = {
+    name: "Akhbar",
+    skill: "Chef",
+    city: "Mumbai",
+  };
+
+  let obj3 = {
+    name: "Anthony",
+    skill: "Magician",
+    city: "Kashmir",
+  };
+  let func = function (a, b) {
+    console.log(
+      `${this.name} from ${this.city} is a ${this.skill}, ${a} and ${b}`
+    );
+  };
+
+  func.call(obj1, obj2.skill, obj3.skill);
+  func.call(obj2, obj1.skill, obj3.skill);
+  func.call(obj3, obj2.skill, obj1.skill);
+</script>

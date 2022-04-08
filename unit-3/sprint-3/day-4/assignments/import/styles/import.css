@@ -1,0 +1,16 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navBar{
+    display: flex;
+    justify-content: space-evenly;
+}
+#navBar input{
+    height:25px;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

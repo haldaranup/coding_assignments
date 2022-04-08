@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .main {
+            width: 40%;
+            margin: auto;
+        }
+
+        p {
+            border: 2px solid rgb(49, 48, 48);
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        button {
+            border: none;
+            background-color: #ff0000;
+            color: aliceblue;
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <p class="p">Your Score here!</p>
+        <button class="btn">Throw Dice</button>
+    </div>
+
+
+
+
+    <script>
+        const btn = document.querySelector(".btn")
+        const txt = document.querySelector(".p")
+        const sel = function () {
+            const random = Math.floor(Math.random() * 6) + 1
+            txt.textContent = random
+            txt.style.color = "red"
+            if (random == 6) {
+                txt.style.color = "green"
+            }
+            if (random == 1) {
+                txt.style.color = "#ffae00"
+            }
+        }
+        btn.addEventListener("click", sel)
+        
+    </script>
+</body>
+
+</html>
