@@ -1,0 +1,36 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 10vh;
+  margin: auto;
+  background-color: black;
+  color: white;
+}
+
+.logo{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.link{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+  margin: auto 0;
+}
+.contact{
+  font-size: 1rem;
+  width: 15%;
+  height: 5vh;
+  margin: auto 0;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: #018ba6;
+}
+
+
+
