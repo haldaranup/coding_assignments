@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="gender">
+        <option value="gender">Gender</option>
+        <option value="male" id="male">M</option>
+        <option value="female" id="female">F</option>
+    </select>
+    <input type="number" id="age">
+    <button onclick="check()">Submit</button>
+
+    <script>
+        function check(){
+            var ageCheck = document.getElementById("age").value
+            if(ageCheck>=18){
+                alert("You can marry!")
+            }
+            else{
+                alert("You can't marry!")
+            }
+        }
+    </script>
+</body>
+</html>

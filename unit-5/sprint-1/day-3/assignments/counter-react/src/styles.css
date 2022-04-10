@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+.btn{
+  border: none;
+  width: 10%;
+  height: 5vh;
+  background-color: rgb(101, 37, 219);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 10px;
+}
+.dbl{
+  display: block;
+  margin: auto;
+  width: 20%;
+  margin-top: 20px;
+}

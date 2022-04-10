@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+
+        #item,
+        #qty {
+            height: 40px;
+            width: 200px;
+            border: none;
+            background-color: #fb8500;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        #sub {
+            height: 40px;
+            width: 100px;
+            border: none;
+            background-color: #34a0a4;
+            color: white;
+            border-radius: 4px;
+        }
+
+        form {
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input id="item" type="text" placeholder="Enter Item">
+        <input id="qty" type="text" placeholder="Enter Quantity">
+        <input id="sub" type="submit" value="Add Task">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", todolist)
+        var todoArr = JSON.parse(localStorage.getItem("todo")) || []
+        createTable(todoArr)
+
+        function todolist(event) {
+            event.preventDefault()
+            var item = document.querySelector("#item").value
+            var qty = document.querySelector("#qty").value
+            console.log(item, qty)
+            var taskList = { itemNme: item, itemQty: qty }
+            todoArr.push(taskList)
+            localStorage.setItem("todo", JSON.stringify(todoArr))
+            createTable(todoArr)
+        }
+
+        function createTable(todoArr) {
+            document.querySelector("tbody").textContent = ""
+
+            todoArr.map(function (elem, index) {
+                var tr = document.createElement("tr")
+                var td1 = document.createElement("td")
+                td1.textContent = elem.itemNme
+
+                var td2 = document.createElement("td")
+                td2.textContent = elem.itemQty
+
+                var td3 = document.createElement("td")
+                td3.textContent = "delete"
+
+                td3.addEventListener("click", function () {
+                    deleteTask(index)
+                })
+
+                tr.append(td1, td2, td3)
+
+                document.querySelector("tbody").append(tr)
+            })
+        }
+
+        function deleteTask(index) {
+            console.log(index)
+            todoArr.splice(index, 1)
+            localStorage.setItem("todo", JSON.stringify(todoArr))
+            console.log(todoArr)
+            createTable(todoArr)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(12, 40px);
+            grid-template-rows: repeat(6, 100px);
+            grid-template-areas:
+                "a a a a a a b b b c c c"
+                "d d d e e e b b b c c c"
+                ". . . . . . . . . . . ."
+                "f f f f f f g g g g g g"
+                "h h h i i i i i i i i i"
+                "j j j j j j j j j j j j"
+            ;
+            justify-content: center;
+
+        }
+
+        .container>div {
+            background-color: #444444;
+            border-radius: 10px;
+            font-size: 40px;
+            color: aliceblue;
+            font-weight: bold;
+            display: grid;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .sep {
+            grid-area: s;
+        }
+
+        .box1 {
+
+            grid-area: a;
+        }
+
+        .box2 {
+
+            grid-area: b;
+        }
+
+        .box3 {
+            height: 110%;
+            grid-area: c;
+        }
+
+        .box4 {
+
+            grid-area: d;
+        }
+
+        .box5 {
+
+            grid-area: e;
+        }
+
+        .box6 {
+
+            grid-area: f;
+        }
+
+        .box7 {
+
+            grid-area: g;
+        }
+
+        .box8 {
+
+            grid-area: h;
+        }
+
+        .box9 {
+
+            grid-area: i;
+        }
+
+        .box10 {
+
+            grid-area: j;
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="container">
+        <div class="box1">A</div>
+        <div class="box2">B</div>
+        <div class="box3">E</div>
+        <div class="box4">C</div>
+        <div class="box5">D</div>
+
+        <div class="sep"></div>
+        <div class="sep"></div>
+
+        <div class="box6">A</div>
+        <div class="box7">B</div>
+        <div class="box8">C</div>
+        <div class="box9">D</div>
+        <div class="box10">E</div>
+    </div>
+</body>
+
+</html>

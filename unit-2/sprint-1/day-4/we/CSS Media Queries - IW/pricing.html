@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: poppins, Geneva, Tahoma, sans-serif;
+            box-sizing: border-box;
+        }
+
+        #container {
+            margin: auto;
+            width: 80%;
+            height: 95vh;
+        }
+
+        .heading {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            color: #1d334e;
+            
+        }
+        .heading>p {
+            line-height: 30px;
+            
+        }
+
+        .all {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            height: 60vh;
+            grid-gap: 40px;
+            text-align: center;
+            margin: 50px;
+
+        }
+        .list {
+            line-height: 30px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            width: 160px;
+            height: 45px;
+            font-size: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 2px solid #007aff;
+            color: #007aff;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .color{
+            background-color: #007aff; 
+            color: #ffffff;                      
+        }
+        .starter>h2{
+            color: #0ead7a;
+        }
+        .business>h2{
+            color: #f28046;
+        }
+        .premium>h2{
+            color: #007aff;
+        }
+
+        @media only screen and (min-width: 535px) and (max-width: 768px) {
+            .all {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .list {
+                line-height: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 535px) {
+            .all {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .list {
+            line-height: 25px;
+
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="heading price">
+            <h1>Choose a Plan that Right for Your Business</h1>
+            <p>We collect data from our users so that you can get the bestfrom our users on your budget. Our customer's satisfaction
+                is our priority.</p>
+        </div>
+        <div class="all">
+            <div class="starter price list">
+                <h3>Starter Plan</h3>
+                <h2>FREE</h2>
+                <p><i>Per month</i></p>
+                <p>We collect data from our users so that you can get the best on your budget. Our customer's
+                    satisfaction
+                    is our priority.</p>
+                <input class="btn" type="button" value="Start Now">
+            </div>
+            <div class="business price list">
+                <h3>Business Plan</h3>
+                <h2>$39.00</h2>
+                <p><i>Per month</i></p>
+                <p>We collect data from our users so that you can get the best on your budget. Our customer's
+                    satisfaction
+                    is our priority.</p>
+                <input class="btn color" type="button" value="Start Now">
+            </div>
+            <div class="premium price list">
+                <h3>Premium Plan</h3>
+                <h2>$59.00</h2>
+                <p><i>Per month</i></p>
+                <p>We collect data from our users so that you can get the best on your budget. Our customer's
+                    satisfaction
+                    is our priority.</p>
+                <input class="btn" type="button" value="Start Now">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
