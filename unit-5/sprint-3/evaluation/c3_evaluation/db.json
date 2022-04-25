@@ -1,0 +1,17 @@
+{
+  "users": [
+    
+    
+    {
+        "id": 1,
+      "image": "https://reqres.in/img/faces/1-image.jpg",
+      "name": "Rahul gupta",
+      "salary": "34234",
+      "status": "terminated",
+      "title": "Jr.Software Developer",
+      "tasks": "Assignment",
+      "team": "Backened"
+      
+    }
+  ]
+}
