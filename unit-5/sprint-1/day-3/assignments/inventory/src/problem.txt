@@ -1,0 +1,10 @@
+Create a react app that shows total number of items in an inventory
+Inventory has following items: Books, Pens, Notebooks
+Initialize all to some random number
+Every item has 2 buttons: + and -
+clicking on + increases the count of that item only, same for - button
+at the bottom of the page there's Total section, which shows sum of all the items. books + pens + notebooks
+whenever you are changing any item, it should change the total below as well.
+Inventory should not go below 0
+Use this boilerplate: link you can just download zip as well
+this boilerplate will work with both create-react-app and codesandbox
