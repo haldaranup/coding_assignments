@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "name": "jitesh kumar",
+      "age": "21",
+      "address": "ram nagar,dharuhera",
+      "department": "IT",
+      "salary": "250000",
+      "martialStatus": "No",
+      "id": 1
+    }
+  ]
+}
