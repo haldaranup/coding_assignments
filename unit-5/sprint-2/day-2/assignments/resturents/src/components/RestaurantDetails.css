@@ -1,0 +1,11 @@
+.items{
+    display : grid;
+    grid-template-columns: repeat(3,33%);
+}
+.dish{
+    display : flex;
+    /* background-image : url("") */
+}
+.dishDetail span > h3{
+   color : red;
+}

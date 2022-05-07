@@ -1,0 +1,61 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "employee_name": "Kial Bengtsen",
+      "employee_id": "3ec7a664-9948-4099-9829-a8c75deef782",
+      "title": "Team Lead",
+      "salary": 1000,
+      "image": "http://dummyimage.com/185x177.png/ff4444/ffffff",
+      "username": "kbengtsen0",
+      "password": "oJ79pX",
+      "tasks": [
+        "fixing bugs"
+      ],
+      "status": "working",
+      "team": "frontend"
+    },
+    {
+      "id": 2,
+      "employee_name": "Melessa Grayland",
+      "employee_id": "82eca1df-731e-4d8d-bae2-65cd56ec4f20",
+      "title": "Sr Software Developer",
+      "salary": 4000,
+      "image": "http://dummyimage.com/156x114.png/5fa2dd/ffffff",
+      "username": "mgrayland1",
+      "password": "u5eLhEF9Yb",
+      "tasks": [
+        "fixing bugs",
+        "working on service"
+      ],
+      "status": "terminated",
+      "team": "frontend"
+    },
+    {
+      "id": 3,
+      "employee_name": "Trish Cotillard",
+      "employee_id": "407f36db-e1d4-4581-bf50-38b9fd8142c3",
+      "title": "intern",
+      "salary": 4000,
+      "image": "http://dummyimage.com/139x104.png/ff4444/ffffff",
+      "username": "tcotillard2",
+      "password": "DulsHEd",
+      "tasks": [
+        "writting tests",
+        "fixing bugs"
+      ],
+      "status": "working",
+      "team": "backend"
+    },
+    {
+      "username": "shiva",
+      "password": "121",
+      "id": 15
+    },
+    {
+      "username": "shiva",
+      "password": "121",
+      "id": 16
+    }
+  ]
+}

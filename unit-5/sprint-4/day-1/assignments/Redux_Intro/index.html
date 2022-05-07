@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Redux todos</title>
+		<script type="module" defer src="./build/bundle.js"></script>
+
+		<style>
+			body {
+				text-align: center;
+			}
+
+			#todosLis {
+				width: 40%;
+				margin: auto;
+			}
+			.liEle {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Redux todos...</h1>
+
+		<div class="inpSec">
+			<input type="text" id="text" placeholder="enter todo" />
+			<button id="btn">Add todo</button>
+		</div>
+
+		<div id="todosLis"></div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "restaurant": [
+    {
+      "name": "barbeque nation",
+      "des": "veg an non-veg",
+      "cost": "600",
+      "iscard": true,
+      "iscash": true,
+      "isupi": true,
+      "rev": "4",
+      "id": 1
+    },
+    {
+      "name": "brewbar nation",
+      "des": "veg an non-veg",
+      "cost": "660",
+      "iscard": true,
+      "iscash": false,
+      "isupi": true,
+      "rev": "4",
+      "id": 2
+    },
+    {
+      "name": "alibaba",
+      "des": "veg burger",
+      "cost": "850",
+      "iscard": false,
+      "iscash": true,
+      "isupi": "",
+      "rev": "3",
+      "id": 3
+    }
+  ]
+}
