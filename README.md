@@ -1,2 +1,2 @@
-# code-submission
+# Coding_assignments
 Masai School Coding Assignments
