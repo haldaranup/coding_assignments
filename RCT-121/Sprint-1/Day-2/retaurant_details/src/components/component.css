@@ -1,0 +1,92 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+}
+
+.boxes
+{
+    /* border: 1px solid; */
+    display: inline-flex;
+    width: 420px;
+    height: 160px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}    
+
+.image
+{
+    width: 80px;
+    height: 90px;
+    margin: 10px;
+}
+
+.content
+{
+    /* border: 1px solid black; */
+    height: 120px;
+    margin: 10px;
+}
+
+.name
+{
+    color: brown;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.category
+{
+    color: grey;
+}
+.cost
+{
+    color: grey;
+    font-size: 15px;
+}
+
+.payment
+{
+    font-size: 14px;
+}
+
+.payment p 
+{
+    display: inline-block;
+}
+.lastbox
+{
+    /* border: 1px solid; */
+    margin:10px;
+    height: 120px;
+}
+.rating
+{
+    background-color: darkolivegreen;
+    font-weight: bolder;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.votes
+{
+    font-size: 14px;
+    color: gray;
+}
+button
+{
+    margin-left: 10px;
+}
+
+.buttons
+{
+    margin-top: 10px;
+}
+
+.sorting
+{
+    margin-top: 10px;
+}

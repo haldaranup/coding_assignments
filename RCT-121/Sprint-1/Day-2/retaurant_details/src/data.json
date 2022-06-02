@@ -1,0 +1,154 @@
+{
+    "restaurents" : [
+        {
+            "name" : "restaurent1",
+            "category" : "thai",
+            "cost" : 500,
+            "method" : {
+                "cash" : true,
+                "card" : false,
+                "upi" : false
+            },
+            "rating" : 4.2,
+            "votes" : 200,
+            "review" : 512,
+            "id" : 1,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent2",
+            "category" : "chinies",
+            "cost" : 400,
+            "method" : {
+                "cash" : false,
+                "card" : true,
+                "upi" : false
+            },
+            "rating" : 4.3,
+            "votes" : 300,
+            "review" : 412,
+            "id" : 2,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent3",
+            "category" : "japnees",
+            "cost" : 600,
+            "method" : {
+                "cash" : false,
+                "card" : false,
+                "upi" : true
+            },
+            "rating" : 3.5,
+            "votes" : 500,
+            "review" : 612,
+            "id" : 3,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent4",
+            "category" : "korean",
+            "cost" : 300,
+            "method" : {
+                "cash" : true,
+                "card" : true,
+                "upi" : false
+            },
+            "rating" : 3.1,
+            "votes" : 120,
+            "review" : 300,
+            "id" : 4,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent5",
+            "category" : "vietnemees",
+            "cost" : 700,
+            "method" : {
+                "cash" : true,
+                "card" : false,
+                "upi" : true
+            },
+            "rating" : 2.6,
+            "votes" : 400,
+            "review" : 600,
+            "id" : 5,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent6",
+            "category" : "indian",
+            "cost" : 100,
+            "method" : {
+                "cash" : true,
+                "card" : false,
+                "upi" : false
+            },
+            "rating" : 2.8,
+            "votes" : 600,
+            "review" : 912,
+            "id" : 6,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent7",
+            "category" : "Fast food",
+            "cost" : 350,
+            "method" : {
+                "cash" : true,
+                "card" : true,
+                "upi" : true
+            },
+            "rating" : 1.25,
+            "votes" : 150,
+            "review" : 123,
+            "id" : 7,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent8",
+            "category" : "Punhabi",
+            "cost" : 450,
+            "method" : {
+                "cash" : false,
+                "card" : true,
+                "upi" : false
+            },
+            "rating" : 1.9,
+            "votes" : 1000,
+            "review" : 712,
+            "id" : 8,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent9",
+            "category" : "Marathi",
+            "cost" : 1000,
+            "method" : {
+                "cash" : false,
+                "card" : false,
+                "upi" : true
+            },
+            "rating" : 4.5,
+            "votes" : 650,
+            "review" : 900,
+            "id" : 9,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        },
+        {
+            "name" : "restaurent10",
+            "category" : "Gujrati",
+            "cost" : 350,
+            "method" : {
+                "cash" : true,
+                "card" : false,
+                "upi" : true
+            },
+            "rating" : 3,
+            "votes" : 200,
+            "review" : 112,
+            "id" : 10,
+            "url" : "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg"
+        }     
+    ]
+}
