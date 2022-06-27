@@ -1,0 +1,40 @@
+{
+  "company": [
+    {
+      "id": 1,
+      "title": "Amazon"
+    },
+    {
+      "id": 2,
+      "title": "LinkedIn"
+    },
+    {
+      "id": 3,
+      "title": "Amul"
+    },
+    {
+      "id": 4,
+      "title": "ITC"
+    },
+    {
+      "title": "",
+      "id": 5
+    },
+    {
+      "title": "Google",
+      "id": 6
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "title": "Amazon",
+      "name": "Rahul"
+    },
+    {
+      "id": 2,
+      "title": "LinkedIn",
+      "name": "Sagar"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "learn redux",
+      "status": false
+    },
+    {
+      "title": "Learn React",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Buy Milk",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Take bath",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "hello",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "take bath",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "go",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "fgdf",
+      "status": false,
+      "id": 8
+    }
+  ]
+}
