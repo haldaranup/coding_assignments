@@ -27,6 +27,44 @@ export const reducer = (state = initialState, action) => {
         isLoading: false,
         isError: true,
       };
+    case types.UPDATE_COUNTRY_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case types.UPDATE_COUNTRY_SUCCESS:
+      return {
+        ...state,
+        countries: payload,
+        isLoading: false,
+        isError: false,
+      };
+    case types.UPDATE_COUNTRY_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+    case types.DELETE_COUNTRY_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case types.DELETE_COUNTRY_SUCCESS:
+      return {
+        ...state,
+        countries: payload,
+        isLoading: false,
+        isError: false,
+      };
+    case types.DELETE_COUNTRY_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
     default:
       return state;
   }

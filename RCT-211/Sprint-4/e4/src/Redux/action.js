@@ -11,6 +11,7 @@ const getCountriesSuccess = (payload) =>{
         payload
     }
 }
+
 const getCountriesFailure = () =>{
     return {
         type: types.GET_COUNTRIES_FAILURE
@@ -18,18 +19,18 @@ const getCountriesFailure = () =>{
 }
 const updateCountryRequest = () =>{
     return {
-        type: types.GET_COUNTRIES_REQUEST
+        type: types.UPDATE_COUNTRY_REQUEST
     }
 }
 const updateCountrySuccess = (payload) =>{
     return {
-        type: types.GET_COUNTRIES_SUCCESS,
+        type: types.UPDATE_COUNTRY_SUCCESS,
         payload
     }
 }
 const updateCountryFailure = () =>{
     return {
-        type: types.GET_COUNTRIES_FAILURE
+        type: types.UPDATE_COUNTRY_FAILURE
     }
 }
 const deleteCountryRequest = () =>{
