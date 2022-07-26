@@ -15,7 +15,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 
-import {Link as ProLink, useNavigate, useParams} from "react-router-dom"
+import { Link as ProLink, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,57 +25,61 @@ import {
   getCountriesSuccess,
 } from "../Redux/action";
 
-import { deleteCountryFailure, deleteCountryRequest, deleteCountrySuccess } from "../Redux/action";
+import {
+  deleteCountryFailure,
+  deleteCountryRequest,
+  deleteCountrySuccess,
+} from "../Redux/action";
 
 const Homepage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const {id} = useParams()
+  const { id } = useParams();
   const countries = useSelector((state) => state.countries);
-  const [currentCountry, setCurrentCountry] = useState({})
+  const [currentCountry, setCurrentCountry] = useState({});
+  const [data, setData] = useState([]);
+  console.log(countries);
+
   const getCountries = () => {
     dispatch(getCountriesRequest());
     axios
       .get("/countries")
-      .then((r) => dispatch(getCountriesSuccess(r.data)))
+      .then((r) => {
+        dispatch(getCountriesSuccess(r.data));
+      })
       .catch((e) => dispatch(getCountriesFailure(e)));
   };
+  // console.log(data);
 
   const deleteCountry = (id) => {
-    dispatch(deleteCountryRequest());
-    axios
-      .delete(`/country/${id}`)
-      .then((r) => {
-        dispatch(deleteCountrySuccess(r.data));
-        console.log(r);
-        navigate("/");
-      })
-      .catch((e) => dispatch(deleteCountryFailure(e)));
+    // dispatch(deleteCountryRequest());
+    // axios
+    //   .delete(`/country/${id}`)
+    //   .then((r) => {
+    //     dispatch(deleteCountrySuccess(r.data));
+    //     console.log(r);
+    //     navigate("/");
+    //   })
+    //   .catch((e) => dispatch(deleteCountryFailure(e)));
   };
 
   const sortHandle = (e) => {
     const type = e.target.value;
     if (type === "asc") {
-      countries.sort((a, b) => {
-        return a.population - b.population;
-      });
-    } else if(type === "desc") {
-      countries.sort((a, b) => {
-        return b.population - a.population;
-      });
-    } else return countries;
-    console.log(countries)
+      setData([...countries.sort((a, b) => a.population - b.population)]);
+    } else if (type === "desc") {
+      setData([...countries.sort((a, b) => b.population - a.population)]);
+    } else return data;
+    // console.log(data);
   };
-  const handleEdit = () => {
-
-  }
+  const handleEdit = () => {};
 
   useEffect(() => {
     getCountries();
-    let currentCountry = countries.find((i) => i.id === Number(id));
-    currentCountry && setCurrentCountry(currentCountry)
+    // let currentCountry = countries.find((i) => i.id === Number(id));
+    // currentCountry && setCurrentCountry(currentCountry)
   }, []);
-  console.log(countries);
+  // console.log(data);
 
   return (
     <Box minWidth={"2xl"}>
@@ -115,11 +119,13 @@ const Homepage = () => {
                   <Td>{i.population}</Td>
                   <Td>
                     <ProLink to={`/country/${i.id}`}>
-                      <Button bg={"green"} onClick={handleEdit}>Edit</Button>
+                      <Button bg={"green"} onClick={handleEdit}>
+                        Edit
+                      </Button>
                     </ProLink>
                   </Td>
                   <Td>
-                    <Button bg={"red"} onClick={deleteCountry(currentCountry.id)}>Delete</Button>
+                    {/* <Button bg={"red"} onClick={deleteCountry(currentCountry.id)}>Delete</Button> */}
                   </Td>
                 </Tr>
               );
