@@ -1,0 +1,44 @@
+.list{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 60px;
+    border: 2px solid gray;
+    div {
+        width: 200px;
+        display: flex;
+        justify-content: space-around;
+    }
+    h4 {
+        margin-left: 20px;
+        width: 400px;
+        color: rgb(67, 67, 67);
+    }
+}
+
+.addBtnDiv{
+    margin-top: 20px;
+    input {
+        width: 140px;
+        height: 30px;
+    }
+}
+.btn{
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+.blue {
+    background-color: rgb(0, 21, 92);
+}
+.red {
+    background-color: rgb(201, 0, 34);
+}
+.yellow {
+    background-color: rgb(255, 221, 0);
+    color: rgb(20, 87, 0);
+}
+

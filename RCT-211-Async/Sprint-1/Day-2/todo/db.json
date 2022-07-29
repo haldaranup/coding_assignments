@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "task": "learn react",
+      "id": 1
+    },
+    {
+      "task": "learn redux",
+      "id": 2
+    },
+    {
+      "task": "kjkjgjhg",
+      "id": 3
+    }
+  ]
+}
