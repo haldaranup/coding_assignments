@@ -17,7 +17,7 @@ const AddTodo = ({ getTodos }) => {
       .post("/todos", payload)
       .then((r) => {
         dispatch(addTodoSuccess(r.data));
-        console.log(r.data);
+        // console.log(r.data);
       })
       .catch((e) => {
         dispatch(addTodoFailure(e));

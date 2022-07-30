@@ -33,6 +33,21 @@ const reducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
       };
+    case types.TOGGLE_TODO_REQUEST:
+      return {
+        ...state,
+      };
+    case types.TOGGLE_TODO_SUCCESS:
+        let toggledTodo = state.todos.map((i) => i.id === payload.id ? payload: i)
+        // console.log(toggledTodo)
+      return {
+        ...state,
+        todos: toggledTodo,
+      };
+    case types.TOGGLE_TODO_FAILURE:
+      return {
+        ...state,
+      };
     case types.DELETE_TODO_REQUEST:
       return {
         ...state,
@@ -40,9 +55,23 @@ const reducer = (state = initialState, { type, payload }) => {
     case types.DELETE_TODO_SUCCESS:
       return {
         ...state,
-        todos: payload,
       };
     case types.DELETE_TODO_FAILURE:
+      return {
+        ...state,
+      };
+
+    case types.EDIT_TODO_REQUEST:
+      return {
+        ...state,
+      };
+    case types.EDIT_TODO_SUCCESS:
+      let editTodo = state.todos.map((i) => i.id === payload.id ? payload: i)
+      return {
+        ...state,
+        todos: editTodo,
+      };
+    case types.EDIT_TODO_FAILURE:
       return {
         ...state,
       };

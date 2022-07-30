@@ -37,17 +37,52 @@ const addTodoFailure = () => {
 };
 const deleteTodoRequest = () => {
   return {
-    type: types.DELETE_TODO_FAILURE,
+    type: types.DELETE_TODO_REQUEST,
   };
 };
 const deleteTodoSuccess = () => {
   return {
-    type: types.DELETE_TODO_FAILURE,
+    type: types.DELETE_TODO_SUCCESS,
   };
 };
 const deleteTodoFailure = () => {
   return {
     type: types.DELETE_TODO_FAILURE,
+  };
+};
+const toggleTodoRequest = () => {
+  return {
+    type: types.TOGGLE_TODO_REQUEST,
+  };
+};
+const toggleTodoSuccess = (payload) => {
+  console.log(payload);
+  return {
+    type: types.TOGGLE_TODO_SUCCESS,
+    payload,
+  };
+};
+const toggleTodoFailure = () => {
+  return {
+    type: types.TOGGLE_TODO_FAILURE,
+  };
+};
+
+const editTodoRequest = () => {
+  return {
+    type: types.EDIT_TODO_REQUEST,
+  };
+};
+const editTodoSuccess = (payload) => {
+  console.log(payload);
+  return {
+    type: types.EDIT_TODO_SUCCESS,
+    payload,
+  };
+};
+const editTodoFailure = () => {
+  return {
+    type: types.EDIT_TODO_FAILURE,
   };
 };
 
@@ -60,5 +95,11 @@ export {
   addTodoFailure,
   deleteTodoRequest,
   deleteTodoSuccess,
-  deleteTodoFailure
+  deleteTodoFailure,
+  toggleTodoRequest,
+  toggleTodoFailure,
+  toggleTodoSuccess,
+  editTodoRequest,
+  editTodoSuccess,
+  editTodoFailure,
 };

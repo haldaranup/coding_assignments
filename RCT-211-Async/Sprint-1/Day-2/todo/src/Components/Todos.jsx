@@ -19,7 +19,7 @@ const Todos = () => {
       .get("/todos")
       .then((r) => {
         dispatch(getTodoSuccess(r.data));
-        console.log(r.data);
+        // console.log(r.data);
       })
       .catch((e) => dispatch(getTodoFailure(e)));
   };
@@ -31,8 +31,8 @@ const Todos = () => {
 
   return (
     <div>
-      <TodoList todoList={todos} getTodos={getTodos}/>
       <AddTodo getTodos={getTodos} />
+      <TodoList todoList={todos} getTodos={getTodos}/>
     </div>
   );
 };

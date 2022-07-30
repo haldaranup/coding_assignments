@@ -6,6 +6,9 @@ import {
   deleteTodoFailure,
   deleteTodoRequest,
   deleteTodoSuccess,
+  toggleTodoFailure,
+  toggleTodoRequest,
+  toggleTodoSuccess,
 } from "../State/action";
 
 const TodoList = ({ todoList, getTodos }) => {
@@ -20,12 +23,25 @@ const TodoList = ({ todoList, getTodos }) => {
       })
       .catch((e) => dispatch(deleteTodoFailure(e)));
   };
+  const toggleTodo = (id, status) => {
+    dispatch(toggleTodoRequest());
+    axios
+      .patch(`/todos/${id}`, {isComplete: status})
+      .then((r) => {
+        dispatch(toggleTodoSuccess(r.data));
+      })
+      .catch((e) => dispatch(toggleTodoFailure(e)));
+  };
+
   return (
     <div>
       {todoList.map((i) => {
         return (
           <div key={i.id} className="list">
-            <h4>{i.task}</h4>
+            <h6>{i.task}</h6>
+            <button onClick={() =>toggleTodo(i.id, !i.isComplete)} className={i.isComplete ? "btn green" : "btn yellow"}>
+              {i.isComplete ? "Completed" : "Pending"}
+            </button>
             <div>
               <Link to={`/todos/${i.id}/edit`}>
                 <button className="btn yellow">Edit</button>
