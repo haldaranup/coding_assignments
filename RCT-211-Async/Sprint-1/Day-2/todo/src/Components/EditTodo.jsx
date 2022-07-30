@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   editTodoFailure,
   editTodoRequest,
@@ -17,7 +17,7 @@ const EditTodo = () => {
 
   const { id } = useParams();
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const getTodos = () => {
     dispatch(getTodoRequest());
@@ -36,17 +36,25 @@ const EditTodo = () => {
       .patch(`/todos/${id}`, payload)
       .then((r) => {
         dispatch(editTodoSuccess(r.data));
-        alert(`Are you sure you want to edit your task "${currentTodo.task}" to "${payload.task}"`)
-        navigate("/")
+        if (r.data.task === currentTodo.task) {
+          alert(`Please enter different task`);
+        } else if (r.data.task === "") {
+          alert(`Please enter something...`);
+        } else {
+          alert(
+            `Are you sure you want to edit your task "${currentTodo.task}" to "${payload.task}"`
+          );
+          navigate("/");
+        }
       })
       .catch((e) => dispatch(editTodoFailure(e)));
   };
-  const handleEdit = () =>{
-    const payload = {task: edit}
-    editTodo(payload)
-    setEdit("")
-    getTodos()
-  }
+  const handleEdit = () => {
+    const payload = { task: edit };
+    editTodo(payload);
+    setEdit("");
+    getTodos();
+  };
 
   useEffect(() => {
     getTodos();
@@ -60,7 +68,12 @@ const EditTodo = () => {
         value={edit}
         onChange={(e) => setEdit(e.target.value)}
       />
-      <button className="btn yellow" onClick={handleEdit}>Edit</button>
+      <button className="btn yellow" onClick={handleEdit}>
+        Edit
+      </button>
+      <Link to="/">
+        <button className="btn green">HOME</button>
+      </Link>
     </div>
   );
 };

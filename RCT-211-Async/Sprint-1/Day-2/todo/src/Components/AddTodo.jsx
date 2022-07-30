@@ -26,9 +26,13 @@ const AddTodo = ({ getTodos }) => {
 
   const handleAdd = () => {
     const payload = { task: task };
-    addTodo(payload);
-    setTask("");
-    getTodos();
+    if (payload.task === "") {
+      alert(`Please add something...`);
+    } else {
+      addTodo(payload);
+      setTask("");
+      getTodos();
+    }
   };
 
   return (
