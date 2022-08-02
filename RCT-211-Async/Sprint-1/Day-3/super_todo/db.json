@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "task": "json-server",
+      "status": false
+    },
+    {
+      "task": "learn react",
+      "status": false,
+      "id": 2
+    },
+    {
+      "task": "learn reduc",
+      "status": false,
+      "id": 3
+    }
+  ]
+}
