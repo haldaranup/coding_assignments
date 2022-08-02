@@ -28,11 +28,16 @@ const Todos = () => {
 
   return (
     <div>
-      {!isAuth && <Login />}
-      <AddTodo />
-      {todos.map((i) => {
-        return <TodoList todos={i} key={i.id} />;
-      })}
+      {isAuth ? (
+        <div>
+          <AddTodo />
+          {todos.map((i) => {
+            return <TodoList todos={i} key={i.id} />;
+          })}
+        </div>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 };
