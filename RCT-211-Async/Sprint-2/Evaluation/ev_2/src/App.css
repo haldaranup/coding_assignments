@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.mainContainer{
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+
+.watchCard {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cardItems {
+  height: 320px;
+  width: 245px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.cardItems > :nth-child(2){
+  width: 50%;
+  margin: auto;
+}
+
+.watchCard img {
+  height: 200px;
+  width: 240px;
+}
+
+.img > img {
+  height: 300px;
+  width: 360px;
+}
+
+.nav{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  height: 25px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.filter {
+  width: 20%;
+  border: 2px solid black;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.login{
+  width: 20%;
+  margin: auto;
+}
+
+.login input {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
