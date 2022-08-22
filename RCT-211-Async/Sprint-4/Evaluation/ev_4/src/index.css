@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.add {
+  border: 2px solid gray;
+  height: 400px;
+  width: 50%;
+  margin: auto;
+}
+.addProducts > div {
+  margin: 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.productsContainer>div {
+  height: 320px;
+  width: 300px;
+  border: 2px solid gray;
+  border-radius: 8px;
+
+}
+
+.img>img {
+  width: 275px;
+  height: 175px;
+  border-radius: 8px;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+button {
+  color: white;
+  height: 30px;
+  width: 120px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btns :nth-child(1) {
+  background-color: rgb(218, 39, 75);
+}
+
+.btns :nth-child(2) {
+  background-color: rgb(5, 108, 34);
+}
+
+.nav {
+  margin: 0 25% 0;
+  margin-top: 10px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+
+}
+
+.nav button {
+  background-color: rgb(20, 0, 107);
+}
+
+.sidebar {
+  border: 2px solid gray;
+  margin: 0 20px;
+  border-radius: 8px;
+}
+
+.addBtn > button {
+  background-color: rgb(0, 91, 27);
+}
