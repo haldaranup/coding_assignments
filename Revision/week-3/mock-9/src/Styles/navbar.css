@@ -1,0 +1,23 @@
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 36, 153);
+    
+}
+
+.navbar > nav {
+    height: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+span {
+    color: white;
+    font-size: 1.2rem;
+}
+
+span:hover {
+    color: black;
+}

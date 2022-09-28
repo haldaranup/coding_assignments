@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 90%">
+      <input type="text" class="month" />
+      <input type="text" class="attendence" />
+      <input type="text" class="performance" />
+      <button>Add</button>
+      <canvas id="chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="text/javascript">
+      let ctx, chart;
+      window.addEventListener("load", function () {
+        let button = document.querySelector("button");
+        button.addEventListener("click", () => {
+          let month = document.querySelector(".month").value;
+          let attendence = document.querySelector(".attendence").value;
+          let performance = document.querySelector(".performance").value;
+
+          let payload = { month, attendence, performance };
+          addData(chart, payload);
+        });
+
+        ctx = document.getElementById("chart");
+        chart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "January",
+              "February",
+              "March",
+              "April",
+              "May",
+              "June",
+              "July",
+            ],
+            datasets: [
+              {
+                label: "Attendence",
+                backgroundColor: "orange",
+                borderColor: "rgb(255, 99, 132)",
+                data: [100, 45, 60, 80, 20, 30, 45],
+              },
+              {
+                label: "Performance",
+                backgroundColor: "red",
+                borderColor: "rgb(255, 99, 132)",
+                data: [40, 80, 45, 50, 20, 40, 65],
+              },
+            ],
+          },
+        });
+      });
+
+      function addData(chart, {month, attendence, performance}) {
+        chart.data.labels.push(month);
+        chart.data.datasets[0].data.push(attendence);
+        chart.data.datasets[1].data.push(performance);
+        chart.update();
+      }
+    </script>
+  </body>
+</html>

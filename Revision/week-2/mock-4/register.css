@@ -1,0 +1,27 @@
+button {
+    border: none;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(0, 1, 61);
+    color: rgb(247, 255, 22);
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px 30%;
+}
+
+#form {
+    width: 50%;
+    height: 75vh;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-radius: 8px;
+}
+
+input {
+    width: 160px;
+    height: 25px;
+    margin: 10px 30%;
+}

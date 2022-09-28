@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Mart</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <nav class="nav">Masai Mart</nav>
+    <div>
+      <select name="" id="sortValue" onchange="getSort()">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+      <select name="" id="filter" onchange="getFilter()">
+        <option value="kids">Kids</option>
+        <option value="women">Women</option>
+        <option value="men">Men</option>
+        <option value="homedecor">Homedecor</option>
+      </select>
+    </div>
+    <div class="container">
+      <div class="lists"></div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

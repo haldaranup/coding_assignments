@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #def3ff;
+    margin: auto;
+}
+
+#container {
+    width: 55%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container>.btn {
+    height: 50px;
+    width: 220px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #020043;
+    color: #ffea00;
+    font-size: 1.25rem;
+    transition: all 500ms;
+}
+
+#container>.btn:hover {
+    background-color: #ffea00;
+    color: #020043;
+}
+
+
+.heading {
+    width: 20%;
+    font-size: 2.5rem;
+    margin: auto;
+    align-self: center;
+    color: rgb(184, 37, 162);
+    font-weight: 600;
+}
+
+#loginBtn, #searchBtn, .deleteBtn, .editBtn {
+    height: 40px;
+    width: 160px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #020043;
+    color: #ffea00;
+    font-size: 1rem;
+    transition: all 500ms;
+    margin: 20px 0;
+}
+
+#loginBtn:hover, .deleteBtn:hover, .editBtn:hover, #searchBtn:hover {
+    background-color: #ffea00;
+    color: #020043;
+}

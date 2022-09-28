@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(209, 251, 255);
+  }
+  
+
+#editBtn {
+  background-color: rgb(255, 221, 0);
+  color: rgb(0, 0, 0);
+  width: 120px;
+}
+
+.editForm {
+  width: 80%;
+  margin: 40px auto;
+}

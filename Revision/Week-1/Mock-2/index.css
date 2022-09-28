@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* main container starts here */
+
+.search {
+    width: 85%;
+    margin: auto;
+    height: 100px;
+    /* border:  1px solid red; */
+}
+.search > input {
+    padding: 0 8px;
+    height: 30px;
+    width: 200px;
+    margin: 40px 0 0 0;
+}
+.search > button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #00004e;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+    background-color: #dfffff;
+}
+
+.cards {
+    padding: 16px;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+
+}
+
+.leftCard, .rightCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightCard>p {
+    padding: 5px;
+    background-color: #cdffff;
+    border-radius: 6px;
+    font-size: .85rem;
+}
+
+.company {
+    color: #16c0c0;
+}
+
+.position {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.info > p{
+    margin: 12px 0;
+}
+
+.rightCard {
+    width: 260px;
+}
+
+.logo {
+    height: 120px;
+}
+
+.about {
+    width: 115%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-weight: lighter;
+}

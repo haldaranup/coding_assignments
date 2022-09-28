@@ -1,0 +1,22 @@
+.resList {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.restaurant {
+    border: 2px solid gray;
+    border-radius: 8px;
+}
+
+.filterSort > select {
+    height: 30px;
+    width: 140px;
+    margin: 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(101, 39, 177);
+    color: white;
+}

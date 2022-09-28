@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User</title>
+    <link rel="stylesheet" href="./user.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="userContainer">
+      <form class="userForm">
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Age" />
+        <input type="text" placeholder="Place" />
+
+        <div class="dropDown">
+          <div class="batchContainer">
+            Batch
+            <select id="selectBatch">
+              <option value="w11">Web 11</option>
+              <option value="w12">Web 12</option>
+              <option value="w13">Web 13</option>
+              <option value="w14">Web 14</option>
+              <option value="w15">Web 15</option>
+            </select>
+          </div>
+          <div class="proContainer">
+            Profession
+            <select id="selectPro">
+              <option value="FSD">Full-stack</option>
+              <option value="FD">Front-end</option>
+              <option value="BD">Back-end</option>
+              <option value="DA">Data Analytics</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" id="btn" />
+      </form>
+    </div>
+
+    <script src="./user.js"></script>
+  </body>
+</html>

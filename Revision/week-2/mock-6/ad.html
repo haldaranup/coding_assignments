@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/ad.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./ad.html">Ad</a>
+      <a href="./cars.html">Cars</a>
+      <a href="./wishlist.html">Wishlist</a>
+    </nav>
+    <div class="adContainer">
+      <form class="adForm">
+        <select id="brand" required>
+          <option value="">Brand</option>
+          <option value="Tata">Tata</option>
+          <option value="Tesla">Tesla</option>
+          <option value="Mclaren">Mclaren</option>
+          <option value="Audi">Audi</option>
+        </select>
+        <select id="type" required>
+          <option value="">Type</option>
+          <option value="Manual">Manual</option>
+          <option value="AMT">Automated</option>
+        </select>
+        <select id="year" required>
+          <option value="">Year</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+        </select>
+        <input type="text" placeholder="Kms" required />
+        <input type="text" placeholder="Description" required />
+        <input type="text" placeholder="Price" required />
+        <input type="submit" class="btn" id="addCar" />
+      </form>
+    </div>
+
+    <script src="./scripts/ad.js"></script>
+  </body>
+</html>

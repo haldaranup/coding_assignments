@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/cars.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./ad.html">Ad</a>
+      <a href="./cars.html">Cars</a>
+      <a href="./wishlist.html">Wishlist</a>
+    </nav>
+    <div class="sortFilter">
+      <select class="sortbykms">
+        <option value="">Sort by kms</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+      <select class="sortbyprice">
+        <option value="">Sort by price</option>
+        <option value="asc">Low to High</option>
+        <option value="desc">High to Low</option>
+      </select>
+      <select class="filter">
+        <option value="">Filter by Brand</option>
+        <option value="Tata">Tata</option>
+        <option value="Tesla">Tesla</option>
+        <option value="Mahindra">Mahindra</option>
+        <option value="Audi">Audi</option>
+      </select>
+    </div>
+    <div class="carsContainer"></div>
+    <script src="./scripts/cars.js"></script>
+  </body>
+</html>

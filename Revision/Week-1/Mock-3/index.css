@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(149, 0, 97);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cards {
+    width: 200px;
+    font-size: .75rem;
+}
+
+.cards>img {
+    width: 200px;
+    height: 280px;
+}

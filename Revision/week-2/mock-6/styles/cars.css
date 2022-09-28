@@ -1,0 +1,72 @@
+body {
+    background-color: #fff;
+}
+.carImage {
+    width: 270px;
+    border-radius: 8px;
+}
+
+.carsContainer {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 275px));
+    gap: 60px;
+    border-radius: 8px;
+    border: 2px solid black;
+    padding: 40px;
+    margin-top: 40px;
+
+
+}
+
+.sortFilter {
+    width: 90%;
+    margin: 20px auto;
+
+}
+
+.allDetails {
+    width: 260px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    border: 2px solid gray;
+    border-radius: 8px;
+}
+
+.edit, .delete {
+    width: 80px;
+    height: 30px;
+}
+
+.edit {
+    background-color: rgb(255, 221, 0);
+}
+
+.delete {
+    background-color: rgb(255, 0, 38);
+    color: white;
+}
+
+.wishList {
+    width: 35px;
+    cursor: pointer;
+}
+
+.wishList:hover {
+    color: rgb(255, 0, 55);
+}
+
+.addedWishlist {
+    color: rgb(255, 0, 43);
+}

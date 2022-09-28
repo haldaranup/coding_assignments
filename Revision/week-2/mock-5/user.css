@@ -1,0 +1,53 @@
+
+
+.userForm {
+    border: 2px solid gray;
+    height: 60vh;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.userForm > input {
+    height: 35px;
+    width: 200px;
+    padding: 0 8px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 40px;
+}
+
+.dropDown {
+    display: flex;
+    margin: 10px 40px;
+}
+
+.dropDown > div > select {
+    height: 30px;
+    width: 120px;
+    background-color: rgb(70, 0, 132);
+    border-radius: 8px;
+    border: none;
+    color: rgb(255, 255, 0);
+}
+
+#btn {
+    height: 40px;
+    width: 160px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #020043;
+    color: #ffea00;
+    font-size: 1rem;
+    transition: all 500ms;
+    position: absolute;
+    margin: 200px 0 0 500px;
+}
+#btn:hover {
+    background-color: #ffea00;
+    color: #020043;
+}
