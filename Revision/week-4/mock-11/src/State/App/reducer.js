@@ -21,15 +21,15 @@ const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         isError: false,
       };
+
+
+
     case types.GET_TESLA_FAILURE:
       return {
         ...state,
         isLoading: false,
         isError: true,
       };
-
-
-
 
     case types.POST_TESLA_REQUEST:
       return {
@@ -38,7 +38,7 @@ const reducer = (state = initialState, { type, payload }) => {
         isError: false,
       };
     case types.POST_TESLA_SUCCESS:
-      let newData = [...state.tesla, payload]
+      let newData = [...state.tesla, payload];
       return {
         ...state,
         tesla: newData,
@@ -51,6 +51,26 @@ const reducer = (state = initialState, { type, payload }) => {
         isLoading: false,
         isError: true,
       };
+
+      case types.DELETE_TESLA_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case types.DELETE_TESLA_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+      };
+    case types.DELETE_TESLA_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+
 
     default:
       return state;
