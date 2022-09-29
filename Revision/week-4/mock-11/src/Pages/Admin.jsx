@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
+import { useSelector } from 'react-redux'
+import Login from './Login'
 
 const Admin = () => {
+    const isAuth = useSelector(state => state.auth.isAuth)
   return (
     <div>
-        <Navbar />
+        {!isAuth && <Login />}
     </div>
   )
 }

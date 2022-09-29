@@ -1,6 +1,7 @@
 import { Tbody, Tr, Td, Button } from "@chakra-ui/react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   deleteTeslaFailure,
   deleteTeslaRequest,
@@ -11,21 +12,20 @@ import {
 const ListTable = ({ items }) => {
   const dispatch = useDispatch();
 
-  const handleEdit = () => {
-    const handleEdit = (id) => {
-        navigate(`/edit/${id}`);
-      };
-  }
+  const navigate = useNavigate();
+  const handleEdit = (id) => {
+    navigate(`/edit/${id}`);
+  };
 
   const handleDelete = (id) => {
     dispatch(deleteTeslaRequest());
     axios
       .delete(`https://haldaranup.herokuapp.com/teslaIndia/${id}`)
       .then((r) => {
-        alert("Deleted Successfully!!")
-        dispatch(getTesla())
-        dispatch(deleteTeslaSuccess())
-    })
+        alert("Deleted Successfully!!");
+        dispatch(getTesla());
+        dispatch(deleteTeslaSuccess());
+      })
       .catch((e) => dispatch(deleteTeslaFailure(e)));
   };
   return (
@@ -37,7 +37,9 @@ const ListTable = ({ items }) => {
           <Td>{items.state}</Td>
           <Td>{items.yearOfPlanning}</Td>
           <Td>
-            <Button colorScheme="yellow" onClick={() => handleEdit(items.id)}>Edit</Button>
+            <Button colorScheme="yellow" onClick={() => handleEdit(items.id)}>
+              Edit
+            </Button>
           </Td>
           <Td>
             <Button colorScheme="red" onClick={() => handleDelete(items.id)}>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Edit from "../Components/Edit";
 import Admin from "../Pages/Admin";
 import Home from "../Pages/Home";
 import List from "../Pages/List";
@@ -13,6 +14,7 @@ const MainRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/admin/login" element={<Login />} />
+      <Route path="/edit/:id" element={<Edit />} />
 
       <Route
         path="/admin/report"

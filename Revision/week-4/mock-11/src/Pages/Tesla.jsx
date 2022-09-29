@@ -21,6 +21,7 @@ const Tesla = () => {
   const [state, setState] = useState("");
   const [year, setYear] = useState("");
   const [posted, setPosted] = useState(false);
+  const navigate = useNavigate()
 
   const dispatch = useDispatch();
   const handleAdd = (payload) => {
@@ -30,6 +31,7 @@ const Tesla = () => {
       .then((r) => {
         alert("Added Successfully!!");
         dispatch(postTeslaSuccess(r.data));
+        navigate("/")
         setPosted(true);
       })
       .catch((e) => dispatch(postTeslaFailure(e)));
@@ -44,7 +46,7 @@ const Tesla = () => {
 
   return (
     <div className="tesla">
-      
+
       <form onSubmit={handleSubmit}>
         <input
           type="text"

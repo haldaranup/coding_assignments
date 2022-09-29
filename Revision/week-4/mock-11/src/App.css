@@ -15,7 +15,6 @@ p:hover {
 }
 
 .tesla {
-    border: 1px solid red;
     height: 100vh;
 }
 
@@ -28,12 +27,12 @@ p:hover {
     gap: 20px;
 }
 
-.tesla > form > input {
+input {
     height: 35px;
     width: 280px;
     border: 1px solid teal;
     border-radius: 4px;
-    padding: 0 10px;
+    padding-left: 10px;
 }
 
 #add {
@@ -42,5 +41,19 @@ p:hover {
     border-radius: 7px;
     cursor: pointer;
     background-color: rgb(81, 0, 210);
+    color: white;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home > Button {
+    width: 240px;
+    height: 50px;
+    background-color: rgb(0, 125, 54);
     color: white;
 }

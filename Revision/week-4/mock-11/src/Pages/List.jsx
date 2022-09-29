@@ -16,6 +16,7 @@ import Navbar from "../Components/Navbar";
 const List = () => {
   const tesla = useSelector((state) => state.app.tesla);
   console.log("tesla:", tesla);
+  
 
   const dispatch = useDispatch();
 

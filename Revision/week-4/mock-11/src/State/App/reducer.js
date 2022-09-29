@@ -72,6 +72,28 @@ const reducer = (state = initialState, { type, payload }) => {
       };
 
 
+      case types.EDIT_EDIT_REQUEST:
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+      };
+    case types.EDIT_EDIT_SUCCESS:
+      let edited = [...state.tesla.map((i) => i.id == payload.id ? payload: i)]
+      return {
+        ...state,
+        tesla: edited,
+        isLoading: true,
+        isError: false,
+      };
+    case types.EDIT_EDIT_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+
+
     default:
       return state;
   }

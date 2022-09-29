@@ -44,21 +44,38 @@ const postTeslaFailure = () => {
 };
 
 const deleteTeslaRequest = () => {
-    return {
-      type: types.DELETE_TESLA_REQUEST,
-    };
+  return {
+    type: types.DELETE_TESLA_REQUEST,
   };
-  const deleteTeslaSuccess = (payload) => {
-    return {
-      type: types.DELETE_TESLA_SUCCESS,
-      payload,
-    };
+};
+const deleteTeslaSuccess = (payload) => {
+  return {
+    type: types.DELETE_TESLA_SUCCESS,
+    payload,
   };
-  const deleteTeslaFailure = () => {
-    return {
-      type: types.DELETE_TESLA_FAILURE,
-    };
+};
+const deleteTeslaFailure = () => {
+  return {
+    type: types.DELETE_TESLA_FAILURE,
   };
+};
+
+const editTeslaRequest = () => {
+  return {
+    type: types.EDIT_TESLA_REQUEST,
+  };
+};
+const editTeslaSuccess = (payload) => {
+  return {
+    type: types.EDIT_TESLA_SUCCESS,
+    payload,
+  };
+};
+const editTeslaFailure = () => {
+  return {
+    type: types.EDIT_TESLA_FAILURE,
+  };
+};
 
 export {
   getTeslaFailure,
@@ -70,5 +87,8 @@ export {
   deleteTeslaFailure,
   deleteTeslaRequest,
   deleteTeslaSuccess,
+  editTeslaFailure,
+  editTeslaRequest,
+  editTeslaSuccess,
   getTesla,
 };

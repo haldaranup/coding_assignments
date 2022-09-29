@@ -10,7 +10,7 @@ const Home = () => {
     navigate("/admin");
   };
   return (
-    <div>
+    <div className="home">
       <Button onClick={handleTesla}>Tesla</Button>
       <Button onClick={handleAdmin}>Admin</Button>
     </div>

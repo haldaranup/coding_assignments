@@ -5,13 +5,19 @@ const Navbar = () => {
   return (
     <div className="nav">
       <Link to="/admin/list" style={{ textDecoration: "none", color: "white" }}>
-       <p>List</p> 
+        <p>List</p>
       </Link>
-      <Link to="/admin/report" style={{ textDecoration: "none", color: "white" }}>
-      <p>Report</p> 
+      <Link
+        to="/admin/report"
+        style={{ textDecoration: "none", color: "white" }}
+      >
+        <p>Report</p>
       </Link>
-      <Link to="/admin/login" style={{ textDecoration: "none", color: "white" }}>
-      <p>Login</p> 
+      <Link
+        to="/admin/login"
+        style={{ textDecoration: "none", color: "white" }}
+      >
+        <p>Login</p>
       </Link>
     </div>
   );
