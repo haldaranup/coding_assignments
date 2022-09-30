@@ -32,6 +32,15 @@ const reducer = (state = initialState, { type, payload }) => {
         isError: false,
       };
 
+
+    case types.LOGOUT_SUCCESS:
+      return {
+        ...state,
+        isAuth: false,
+        isLoading: false,
+        isError: false,
+      };
+
     default:
       return state;
   }

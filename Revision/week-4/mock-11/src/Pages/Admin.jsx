@@ -1,14 +1,10 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import Login from './Login'
+import React from "react";
+import { useSelector } from "react-redux";
+import Login from "./Login";
 
 const Admin = () => {
-    const isAuth = useSelector(state => state.auth.isAuth)
-  return (
-    <div>
-        {!isAuth && <Login />}
-    </div>
-  )
-}
+  const isAuth = useSelector((state) => state.auth.isAuth);
+  return <div>{!isAuth && <Login />}</div>;
+};
 
-export default Admin
+export default Admin;

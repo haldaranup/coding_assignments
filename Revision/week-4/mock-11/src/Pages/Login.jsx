@@ -11,16 +11,17 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { loginFailure, loginRequest, loginSuccess } from "../State/Auth/action";
 
 const Login = () => {
-  const [email, setEmail] = useState("eve.holt@reqres.in");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isAuth = useSelector(state => state.auth.isAuth)
 
   const handleLogin = (e) => {
     e.preventDefault();

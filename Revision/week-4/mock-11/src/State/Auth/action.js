@@ -14,6 +14,13 @@ const loginFailure = () => {
   return {
     type: types.LOGIN_FAILURE,
   };
+
+
 };
 
-export { loginRequest, loginFailure, loginSuccess };
+const logoutSuccess = () => {
+  return {
+    type: types.LOGOUT_SUCCESS,
+  };
+};
+export { loginRequest, loginFailure, loginSuccess, logoutSuccess };
