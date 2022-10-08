@@ -1,0 +1,20 @@
+.navContainer {
+    background-color: rgb(83, 0, 160);
+    height: 60px;
+}
+
+
+.nav {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+.nav > p{
+    font-size: 1.5rem;
+}
+.nav > div {
+    cursor: pointer;
+}
